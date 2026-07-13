@@ -76,7 +76,7 @@
       width: 44px; height: 44px; border-radius: 10px; object-fit: cover;
       border: 1px solid var(--gold-line);
     }
-    .logo-text { font-size: 1.15rem; font-weight: 800; letter-spacing: -0.4px; }
+    .logo-text { font-size: 1.15rem; font-weight: 800; letter-spacing: -0.4px; color: var(--red); }
     .logo-text b { font-weight: 400; color: var(--muted); }
     .nav-links { display: flex; gap: 30px; align-items: center; }
     .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: color 0.2s; }
@@ -166,6 +166,12 @@
     .brand:hover { border-color: var(--gold-line); background: var(--card-hover); transform: translateY(-4px); }
     .brand img { width: 40px; height: 40px; object-fit: contain; margin-bottom: 10px; filter: grayscale(1) brightness(2); transition: filter 0.3s; }
     .brand:hover img { filter: none; }
+    .brand-fallback {
+      width: 40px; height: 40px; margin: 0 auto 10px;
+      border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; font-weight: 800; color: var(--gold);
+      background: var(--gold-soft); border: 1px solid var(--gold-line);
+    }
     .brand span { font-size: 0.85rem; font-weight: 600; color: var(--muted); }
     .brand:hover span { color: var(--text); }
 
@@ -331,18 +337,18 @@
         <p>Kami jual semua brand HP, kamu tinggal pilih dan gas.</p>
       </div>
       <div class="brand-grid reveal">
-        <div class="brand"><img src="https://cdn.simpleicons.org/Apple/white" alt="Apple" loading="lazy" /><span>Apple</span></div>
-        <div class="brand"><img src="https://cdn.simpleicons.org/Samsung" alt="Samsung" loading="lazy" /><span>Samsung</span></div>
-        <div class="brand"><img src="https://cdn.simpleicons.org/Xiaomi" alt="Xiaomi" loading="lazy" /><span>Xiaomi</span></div>
-        <div class="brand"><img src="https://cdn.simpleicons.org/OPPO" alt="OPPO" loading="lazy" /><span>Oppo</span></div>
-        <div class="brand"><img src="https://cdn.simpleicons.org/Vivo" alt="Vivo" loading="lazy" /><span>Vivo</span></div>
-        <div class="brand"><img src="https://cdn.simpleicons.org/realme" alt="Realme" loading="lazy" /><span>Realme</span></div>
-        <div class="brand"><img src="https://cdn.simpleicons.org/ASUS/white" alt="Asus ROG" loading="lazy" /><span>Asus ROG</span></div>
-        <div class="brand"><img src="https://cdn.simpleicons.org/Google" alt="Google Pixel" loading="lazy" /><span>Pixel</span></div>
-        <div class="brand"><img src="https://cdn.simpleicons.org/Honor" alt="Honor" loading="lazy" /><span>Honor</span></div>
-        <div class="brand"><img src="https://cdn.simpleicons.org/OnePlus/white" alt="OnePlus" loading="lazy" /><span>OnePlus</span></div>
-        <div class="brand"><img src="https://cdn.simpleicons.org/Infinix" alt="Infinix" loading="lazy" /><span>Infinix</span></div>
-        <div class="brand"><img src="https://cdn.simpleicons.org/Motorola" alt="Motorola" loading="lazy" /><span>Motorola</span></div>
+        <div class="brand"><img src="https://cdn.simpleicons.org/Apple/white" alt="Apple" loading="lazy" onerror="this.outerHTML='<div class=&quot;brand-fallback&quot;>A</div>'" /><span>Apple</span></div>
+        <div class="brand"><img src="https://cdn.simpleicons.org/Samsung" alt="Samsung" loading="lazy" onerror="this.outerHTML='<div class=&quot;brand-fallback&quot;>S</div>'" /><span>Samsung</span></div>
+        <div class="brand"><img src="https://cdn.simpleicons.org/Xiaomi" alt="Xiaomi" loading="lazy" onerror="this.outerHTML='<div class=&quot;brand-fallback&quot;>Mi</div>'" /><span>Xiaomi</span></div>
+        <div class="brand"><img src="https://cdn.simpleicons.org/OPPO" alt="OPPO" loading="lazy" onerror="this.outerHTML='<div class=&quot;brand-fallback&quot;>O</div>'" /><span>Oppo</span></div>
+        <div class="brand"><img src="https://cdn.simpleicons.org/Vivo" alt="Vivo" loading="lazy" onerror="this.outerHTML='<div class=&quot;brand-fallback&quot;>V</div>'" /><span>Vivo</span></div>
+        <div class="brand"><img src="https://cdn.simpleicons.org/realme" alt="Realme" loading="lazy" onerror="this.outerHTML='<div class=&quot;brand-fallback&quot;>r</div>'" /><span>Realme</span></div>
+        <div class="brand"><img src="https://cdn.simpleicons.org/ASUS/white" alt="Asus ROG" loading="lazy" onerror="this.outerHTML='<div class=&quot;brand-fallback&quot;>R</div>'" /><span>Asus ROG</span></div>
+        <div class="brand"><img src="https://cdn.simpleicons.org/Google" alt="Google Pixel" loading="lazy" onerror="this.outerHTML='<div class=&quot;brand-fallback&quot;>G</div>'" /><span>Pixel</span></div>
+        <div class="brand"><img src="https://cdn.simpleicons.org/Honor" alt="Honor" loading="lazy" onerror="this.outerHTML='<div class=&quot;brand-fallback&quot;>H</div>'" /><span>Honor</span></div>
+        <div class="brand"><img src="https://cdn.simpleicons.org/OnePlus/white" alt="OnePlus" loading="lazy" onerror="this.outerHTML='<div class=&quot;brand-fallback&quot;>1+</div>'" /><span>OnePlus</span></div>
+        <div class="brand"><img src="https://cdn.simpleicons.org/Infinix" alt="Infinix" loading="lazy" onerror="this.outerHTML='<div class=&quot;brand-fallback&quot;>iX</div>'" /><span>Infinix</span></div>
+        <div class="brand"><img src="https://cdn.simpleicons.org/Motorola" alt="Motorola" loading="lazy" onerror="this.outerHTML='<div class=&quot;brand-fallback&quot;>M</div>'" /><span>Motorola</span></div>
       </div>
     </div>
   </section>
