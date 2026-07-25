@@ -229,7 +229,8 @@
     .brand-icon .b-text.honor { font-size: 0.75rem; letter-spacing: 1px; }
     .brand-icon .b-text.pixel { font-size: 0.9rem; }
     .brand-icon .b-text.asus { font-size: 0.85rem; }
-    .brand-icon img { width: 24px; height: 24px; object-fit: contain; }
+    .brand-icon img { width: 24px; height: 24px; object-fit: contain; filter: brightness(0) invert(1); opacity: 0.6; transition: filter 0.3s, opacity 0.3s; }
+    .brand:hover .brand-icon img { filter: none; opacity: 1; }
     .brand:hover .brand-icon { background: rgba(255,204,0,0.15); transform: scale(1.08); border-color: rgba(255,204,0,0.3); }
     .brand span { font-size: 0.8rem; font-weight: 600; color: var(--muted); }
     .brand:hover span { color: var(--text); }
@@ -437,16 +438,16 @@
       </div>
       <div class="brand-grid reveal">
         <div class="brand"><div class="brand-icon"><img src="assets/brands/apple.svg" alt="Apple" /></div><span>Apple</span></div>
-        <div class="brand"><div class="brand-icon"><span class="b-text samsung">SAMSUNG</span></div><span>Samsung</span></div>
-        <div class="brand"><div class="brand-icon"><span class="b-text xiaomi">xiaomi</span></div><span>Xiaomi</span></div>
-        <div class="brand"><div class="brand-icon"><span class="b-text oppo">oppo</span></div><span>Oppo</span></div>
-        <div class="brand"><div class="brand-icon"><span class="b-text vivo">vivo</span></div><span>Vivo</span></div>
-        <div class="brand"><div class="brand-icon"><span class="b-text realme">realme</span></div><span>Realme</span></div>
-        <div class="brand"><div class="brand-icon"><span class="b-text asus">ROG</span></div><span>Asus ROG</span></div>
-        <div class="brand"><div class="brand-icon"><span class="b-text pixel">Pixel</span></div><span>Pixel</span></div>
-        <div class="brand"><div class="brand-icon"><span class="b-text honor">HONOR</span></div><span>Honor</span></div>
-        <div class="brand"><div class="brand-icon"><span class="b-text oneplus">ONEPLUS</span></div><span>OnePlus</span></div>
-        <div class="brand"><div class="brand-icon"><span class="b-text infinix">Infinix</span></div><span>Infinix</span></div>
+        <div class="brand"><div class="brand-icon"><img src="assets/brands/samsung.svg" alt="Samsung" /></div><span>Samsung</span></div>
+        <div class="brand"><div class="brand-icon"><img src="assets/brands/xiaomi.svg" alt="Xiaomi" /></div><span>Xiaomi</span></div>
+        <div class="brand"><div class="brand-icon"><img src="assets/brands/oppo.svg" alt="OPPO" /></div><span>Oppo</span></div>
+        <div class="brand"><div class="brand-icon"><img src="assets/brands/vivo.svg" alt="Vivo" /></div><span>Vivo</span></div>
+        <div class="brand"><div class="brand-icon"><img src="assets/brands/realme.svg" alt="Realme" /></div><span>Realme</span></div>
+        <div class="brand"><div class="brand-icon"><img src="assets/brands/asus.svg" alt="ASUS" /></div><span>Asus ROG</span></div>
+        <div class="brand"><div class="brand-icon"><img src="assets/brands/google.svg" alt="Google" /></div><span>Pixel</span></div>
+        <div class="brand"><div class="brand-icon"><img src="assets/brands/honor.svg" alt="Honor" /></div><span>Honor</span></div>
+        <div class="brand"><div class="brand-icon"><img src="assets/brands/oneplus.svg" alt="OnePlus" /></div><span>OnePlus</span></div>
+        <div class="brand"><div class="brand-icon"><img src="assets/brands/infinix.svg" alt="Infinix" /></div><span>Infinix</span></div>
         <div class="brand"><div class="brand-icon"><img src="assets/brands/motorola.svg" alt="Motorola" /></div><span>Motorola</span></div>
       </div>
     </div>
