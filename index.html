@@ -209,14 +209,28 @@
       padding: 20px 10px; text-align: center; transition: all 0.25s;
     }
     .brand:hover { border-color: var(--gold-line); background: var(--card-hover); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
-    .brand img { width: 36px; height: 36px; object-fit: contain; margin-bottom: 8px; filter: grayscale(1) brightness(2); transition: filter 0.3s; }
-    .brand:hover img { filter: none; }
-    .brand-fallback {
-      width: 36px; height: 36px; margin: 0 auto 8px;
-      border-radius: 8px; display: flex; align-items: center; justify-content: center;
-      font-size: 1.1rem; font-weight: 800; color: var(--gold);
-      background: var(--gold-soft); border: 1px solid var(--gold-line);
+    .brand-icon {
+      width: 40px; height: 40px; margin: 0 auto 10px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 10px; background: var(--gold-soft); border: 1px solid var(--gold-line);
+      transition: all 0.25s;
     }
+    .brand-icon svg { width: 24px; height: 24px; }
+    .brand-icon .b-text {
+      font-size: 1.1rem; font-weight: 800; color: var(--gold); letter-spacing: -0.3px;
+    }
+    .brand-icon .b-text.samsung { font-size: 0.75rem; letter-spacing: 1px; }
+    .brand-icon .b-text.xiaomi { font-size: 0.95rem; text-transform: lowercase; }
+    .brand-icon .b-text.oppo { font-size: 0.95rem; text-transform: lowercase; }
+    .brand-icon .b-text.vivo { font-size: 0.95rem; text-transform: lowercase; }
+    .brand-icon .b-text.realme { font-size: 0.9rem; text-transform: lowercase; }
+    .brand-icon .b-text.infinix { font-size: 0.9rem; }
+    .brand-icon .b-text.oneplus { font-size: 0.7rem; letter-spacing: 0.5px; }
+    .brand-icon .b-text.honor { font-size: 0.75rem; letter-spacing: 1px; }
+    .brand-icon .b-text.pixel { font-size: 0.9rem; }
+    .brand-icon .b-text.asus { font-size: 0.85rem; }
+    .brand-icon img { width: 24px; height: 24px; object-fit: contain; }
+    .brand:hover .brand-icon { background: rgba(255,204,0,0.15); transform: scale(1.08); border-color: rgba(255,204,0,0.3); }
     .brand span { font-size: 0.8rem; font-weight: 600; color: var(--muted); }
     .brand:hover span { color: var(--text); }
 
@@ -422,18 +436,18 @@
         <p>Kami jual semua brand HP, kamu tinggal pilih dan gas.</p>
       </div>
       <div class="brand-grid reveal">
-        <div class="brand"><img src="assets/brands/apple.svg" alt="Apple" loading="lazy" onerror="this.outerHTML='<div class=&quot;brand-fallback&quot;>A</div>'" /><span>Apple</span></div>
-        <div class="brand"><img src="assets/brands/samsung.svg" alt="Samsung" loading="lazy" onerror="this.outerHTML='<div class=&quot;brand-fallback&quot;>S</div>'" /><span>Samsung</span></div>
-        <div class="brand"><img src="assets/brands/xiaomi.svg" alt="Xiaomi" loading="lazy" onerror="this.outerHTML='<div class=&quot;brand-fallback&quot;>Mi</div>'" /><span>Xiaomi</span></div>
-        <div class="brand"><img src="assets/brands/oppo.svg" alt="OPPO" loading="lazy" onerror="this.outerHTML='<div class=&quot;brand-fallback&quot;>O</div>'" /><span>Oppo</span></div>
-        <div class="brand"><img src="assets/brands/vivo.svg" alt="Vivo" loading="lazy" onerror="this.outerHTML='<div class=&quot;brand-fallback&quot;>V</div>'" /><span>Vivo</span></div>
-        <div class="brand"><img src="assets/brands/realme.svg" alt="Realme" loading="lazy" onerror="this.outerHTML='<div class=&quot;brand-fallback&quot;>r</div>'" /><span>Realme</span></div>
-        <div class="brand"><img src="assets/brands/asus.svg" alt="Asus ROG" loading="lazy" onerror="this.outerHTML='<div class=&quot;brand-fallback&quot;>R</div>'" /><span>Asus ROG</span></div>
-        <div class="brand"><img src="assets/brands/google.svg" alt="Google Pixel" loading="lazy" onerror="this.outerHTML='<div class=&quot;brand-fallback&quot;>G</div>'" /><span>Pixel</span></div>
-        <div class="brand"><img src="assets/brands/honor.svg" alt="Honor" loading="lazy" onerror="this.outerHTML='<div class=&quot;brand-fallback&quot;>H</div>'" /><span>Honor</span></div>
-        <div class="brand"><img src="assets/brands/oneplus.svg" alt="OnePlus" loading="lazy" onerror="this.outerHTML='<div class=&quot;brand-fallback&quot;>1+</div>'" /><span>OnePlus</span></div>
-        <div class="brand"><img src="assets/brands/infinix.svg" alt="Infinix" loading="lazy" onerror="this.outerHTML='<div class=&quot;brand-fallback&quot;>iX</div>'" /><span>Infinix</span></div>
-        <div class="brand"><img src="assets/brands/motorola.svg" alt="Motorola" loading="lazy" onerror="this.outerHTML='<div class=&quot;brand-fallback&quot;>M</div>'" /><span>Motorola</span></div>
+        <div class="brand"><div class="brand-icon"><img src="assets/brands/apple.svg" alt="Apple" /></div><span>Apple</span></div>
+        <div class="brand"><div class="brand-icon"><span class="b-text samsung">SAMSUNG</span></div><span>Samsung</span></div>
+        <div class="brand"><div class="brand-icon"><span class="b-text xiaomi">xiaomi</span></div><span>Xiaomi</span></div>
+        <div class="brand"><div class="brand-icon"><span class="b-text oppo">oppo</span></div><span>Oppo</span></div>
+        <div class="brand"><div class="brand-icon"><span class="b-text vivo">vivo</span></div><span>Vivo</span></div>
+        <div class="brand"><div class="brand-icon"><span class="b-text realme">realme</span></div><span>Realme</span></div>
+        <div class="brand"><div class="brand-icon"><span class="b-text asus">ROG</span></div><span>Asus ROG</span></div>
+        <div class="brand"><div class="brand-icon"><span class="b-text pixel">Pixel</span></div><span>Pixel</span></div>
+        <div class="brand"><div class="brand-icon"><span class="b-text honor">HONOR</span></div><span>Honor</span></div>
+        <div class="brand"><div class="brand-icon"><span class="b-text oneplus">ONEPLUS</span></div><span>OnePlus</span></div>
+        <div class="brand"><div class="brand-icon"><span class="b-text infinix">Infinix</span></div><span>Infinix</span></div>
+        <div class="brand"><div class="brand-icon"><img src="assets/brands/motorola.svg" alt="Motorola" /></div><span>Motorola</span></div>
       </div>
     </div>
   </section>
@@ -578,6 +592,25 @@
   <button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
   <script>
+    // Fix refresh: always back to top (beranda awal)
+    if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
+    // On reload, clear hash and scroll to top
+    window.addEventListener('load', () => {
+      // If page was refreshed, remove hash and go to top
+      if (performance.getEntriesByType('navigation')[0]?.type === 'reload' || performance.navigation?.type === 1) {
+        if (location.hash) { history.replaceState(null, '', location.pathname); }
+        window.scrollTo(0, 0);
+      } else {
+        // On first load with hash from link, respect it after a tick, otherwise stay at top
+        if (location.hash) {
+          const target = document.querySelector(location.hash);
+          if (target) { setTimeout(() => target.scrollIntoView({ behavior: 'smooth' }), 100); }
+        } else {
+          window.scrollTo(0, 0);
+        }
+      }
+    });
+
     // Scroll reveal
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); } });
@@ -590,11 +623,13 @@
       document.getElementById('backTop').classList.toggle('visible', window.scrollY > 500);
     });
 
-    // Smooth anchor
+    // Smooth anchor (update URL but keep SPA feel) + no scroll jump on reload
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', function (e) {
-        const t = document.querySelector(this.getAttribute('href'));
-        if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+        const href = this.getAttribute('href');
+        if (href === '#') { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); history.replaceState(null, '', location.pathname); return; }
+        const t = document.querySelector(href);
+        if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); history.pushState(null, '', href); }
       });
     });
   </script>
