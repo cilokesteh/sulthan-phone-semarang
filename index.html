@@ -573,9 +573,10 @@
     const nav=document.getElementById('mainNav'), back=document.getElementById('backTop'), sticky=document.getElementById('stickyCta');
     window.addEventListener('scroll',()=>{
       nav.classList.toggle('scrolled',scrollY>30);
-      back.classList.toggle('visible',scrollY>520);
+      if(back) back.classList.toggle('visible',scrollY>520);
       sticky.classList.toggle('show',scrollY>900);
     },{passive:true});
+    if(back) back.addEventListener('click',()=>{ window.scrollTo({top:0,behavior:'smooth'}); });
     // drawer
     const drawer=document.getElementById('drawer'), mBtn=document.getElementById('mobileToggle'), dClose=document.getElementById('drawerClose');
     function openDrawer(){drawer.classList.add('open');document.body.style.overflow='hidden';}
