@@ -206,13 +206,13 @@
     .foot-copy{color:rgba(136,144,168,.38);font-size:.72rem;padding-top:16px;border-top:1px solid var(--line)}
 
     /* FLOATING WA + STICKY BOTTOM BAR (paket 900rb must-have) */
-    .wa-float{position:fixed;bottom:24px;right:20px;width:54px;height:54px;background:var(--wa);border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:999;box-shadow:0 4px 20px rgba(37,211,102,.4);animation:pulse 2s infinite;transition:transform .25s}
+    .wa-float{position:fixed;bottom:24px;right:20px;width:54px;height:54px;background:var(--wa);border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:899;box-shadow:0 4px 20px rgba(37,211,102,.4);animation:pulse 2s infinite;transition:transform .25s,opacity .25s}
     @keyframes pulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.4)}50%{box-shadow:0 4px 28px rgba(37,211,102,.65)}}
     .wa-float:hover{transform:scale(1.1)}.wa-float svg{width:26px;height:26px;fill:#fff}
-    .back-top{position:fixed;bottom:24px;right:86px;width:42px;height:42px;background:var(--card);border:1px solid var(--line);border-radius:50%;display:none;align-items:center;justify-content:center;color:var(--muted);font-size:17px;cursor:pointer;z-index:998;transition:all .25s}
+    .back-top{position:fixed;bottom:24px;right:86px;width:42px;height:42px;background:var(--card);border:1px solid var(--line);border-radius:50%;display:none;align-items:center;justify-content:center;color:var(--muted);font-size:17px;cursor:pointer;z-index:898;transition:all .25s}
     .back-top:hover{border-color:var(--gold-line);color:var(--gold);background:var(--gold-soft)}.back-top.visible{display:flex}
     /* sticky bottom CTA bar for high conversion */
-    .sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:997;background:rgba(10,10,20,.94);backdrop-filter:blur(20px);border-top:1px solid var(--gold-line);padding:10px 14px;display:flex;gap:10px;align-items:center;justify-content:space-between;transform:translateY(110%);transition:transform .35s ease}
+    .sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:997;background:rgba(10,10,20,.94);backdrop-filter:blur(20px);border-top:1px solid var(--gold-line);padding:10px 14px;display:flex;gap:10px;align-items:center;justify-content:space-between;transform:translateY(110%);transition:transform .35s ease;box-shadow:0 -8px 32px rgba(0,0,0,.6)}
     .sticky-cta.show{transform:translateY(0)}
     .sticky-cta .left{display:flex;align-items:center;gap:10px;min-width:0}
     .sticky-cta .left img{width:36px;height:36px;border-radius:8px;flex-shrink:0}
@@ -222,7 +222,17 @@
 
     /* ANIM */
     .reveal{opacity:0;transform:translateY(20px);transition:all .5s ease}.reveal.show{opacity:1;transform:translateY(0)}
-    @media(max-width:520px){.wrap{padding:0 16px}section{padding:52px 0}.hero{min-height:auto;padding:100px 0 44px}.sticky-cta{padding-bottom:calc(10px + env(safe-area-inset-bottom))}}
+    @media(max-width:600px){
+      .wa-float{left:16px;right:auto;bottom:88px;width:52px;height:52px}
+      .back-top{left:auto;right:16px;bottom:88px;width:40px;height:40px;font-size:15px}
+      .sticky-cta{padding:12px 14px calc(12px + env(safe-area-inset-bottom))}
+      body.drawer-open .wa-float, body.drawer-open .back-top{opacity:0;pointer-events:none}
+    }
+    @media(min-width:601px){
+      .wa-float{left:auto;right:20px;bottom:24px}
+      .back-top{left:auto;right:86px;bottom:24px}
+    }
+    @media(max-width:520px){.wrap{padding:0 16px}section{padding:52px 0}.hero{min-height:auto;padding:100px 0 44px}.sticky-cta{padding-bottom:calc(14px + env(safe-area-inset-bottom))}}
   </style>
 </head>
 <body>
@@ -579,8 +589,8 @@
     if(back) back.addEventListener('click',()=>{ window.scrollTo({top:0,behavior:'smooth'}); });
     // drawer
     const drawer=document.getElementById('drawer'), mBtn=document.getElementById('mobileToggle'), dClose=document.getElementById('drawerClose');
-    function openDrawer(){drawer.classList.add('open');document.body.style.overflow='hidden';}
-    function closeDrawer(){drawer.classList.remove('open');document.body.style.overflow='';}
+    function openDrawer(){drawer.classList.add('open');document.body.classList.add('drawer-open');document.body.style.overflow='hidden';}
+    function closeDrawer(){drawer.classList.remove('open');document.body.classList.remove('drawer-open');document.body.style.overflow='';}
     mBtn.addEventListener('click',openDrawer);
     dClose.addEventListener('click',closeDrawer);
     drawer.addEventListener('click',(e)=>{ if(e.target===drawer) closeDrawer(); });
