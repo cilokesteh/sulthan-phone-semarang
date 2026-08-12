@@ -1,11 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.sulthanbuphone.web.id/</loc><changefreq>weekly</changefreq><priority>1</priority></url>
-  <url><loc>https://www.sulthanbuphone.web.id/#tentang</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.sulthanbuphone.web.id/#brands</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.sulthanbuphone.web.id/#layanan</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.sulthanbuphone.web.id/#galeri</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.sulthanbuphone.web.id/#gestun</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.sulthanbuphone.web.id/#faq</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.sulthanbuphone.web.id/#lokasi</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
