@@ -29,6 +29,7 @@
   <link rel="apple-touch-icon" href="assets/sulthan-logo.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKfsunDXbtM.woff2" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet" />
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
@@ -181,7 +182,7 @@
     .testi p{color:var(--muted);font-size:.86rem;margin-bottom:12px;line-height:1.6}
     .testi .who{font-weight:700;font-size:.84rem}.testi .who span{color:var(--muted);font-weight:400}
 
-    /* FAQ - NEW for paket 900rb anti-nawar */
+    /* FAQ */
     .faq-grid{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
     .faq{border:1px solid var(--line);border-radius:12px;background:var(--card);overflow:hidden;transition:border-color .2s}
     .faq.open{border-color:var(--gold-line)}
@@ -205,13 +206,13 @@
     .foot-links a{color:var(--muted);text-decoration:none;font-size:.8rem;transition:color .2s}.foot-links a:hover{color:var(--gold)}
     .foot-copy{color:rgba(136,144,168,.38);font-size:.72rem;padding-top:16px;border-top:1px solid var(--line)}
 
-    /* FLOATING WA + STICKY BOTTOM BAR (paket 900rb must-have) */
+    /* FLOATING WA + STICKY BOTTOM BAR */
     .wa-float{position:fixed;bottom:24px;right:20px;width:54px;height:54px;background:var(--wa);border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:899;box-shadow:0 4px 20px rgba(37,211,102,.4);animation:pulse 2s infinite;transition:transform .25s,opacity .25s}
     @keyframes pulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.4)}50%{box-shadow:0 4px 28px rgba(37,211,102,.65)}}
     .wa-float:hover{transform:scale(1.1)}.wa-float svg{width:26px;height:26px;fill:#fff}
     .back-top{position:fixed;bottom:24px;right:86px;width:42px;height:42px;background:var(--card);border:1px solid var(--line);border-radius:50%;display:none;align-items:center;justify-content:center;color:var(--muted);font-size:17px;cursor:pointer;z-index:898;transition:all .25s}
     .back-top:hover{border-color:var(--gold-line);color:var(--gold);background:var(--gold-soft)}.back-top.visible{display:flex}
-    /* sticky bottom CTA bar for high conversion */
+    /* sticky bottom CTA bar */
     .sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:997;background:rgba(10,10,20,.94);backdrop-filter:blur(20px);border-top:1px solid var(--gold-line);padding:10px 14px;display:flex;gap:10px;align-items:center;justify-content:space-between;transform:translateY(110%);transition:transform .35s ease;box-shadow:0 -8px 32px rgba(0,0,0,.6)}
     .sticky-cta.show{transform:translateY(0)}
     .sticky-cta .left{display:flex;align-items:center;gap:10px;min-width:0}
@@ -389,7 +390,7 @@
     <div class="wrap">
       <div class="gestun-box reveal">
         <div class="sec-head" style="margin-bottom:8px">
-          <span class="kicker">💳 Gestun & Paylater — Paket 900rb Best Seller</span>
+          <span class="kicker">💳 Gestun & Paylater — Best Seller</span>
           <h2>Limit Jadi Uang Tunai Hari Ini</h2>
           <p>Gestun all paylater & CC. Proses aman, cepat, fee transparan — cair hari ini juga.</p>
         </div>
@@ -440,7 +441,7 @@
     </div>
   </section>
 
-  <!-- FAQ — WAJIB landing 900rb high conversion: jawab objection -->
+  <!-- FAQ: jawab objection -->
   <section id="faq" style="border-top:1px solid var(--line)">
     <div class="wrap">
       <div class="sec-head reveal">
@@ -531,7 +532,7 @@
     <a href="https://wa.me/6281585857577?text=Halo%20Sulthan%20BU%20Phone%20mau%20tanya%20stok%20HP..." target="_blank" rel="noopener" class="btn btn-wa">Chat WA →</a>
   </div>
 
-  <!-- SEO JSON-LD — WAJIB paket landing high conversion -->
+  <!-- SEO JSON-LD -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
