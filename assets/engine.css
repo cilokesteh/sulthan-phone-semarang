@@ -1,26 +1,34 @@
 /* ==========================================================================
-   SULTHAN BU PHONE — MIDNIGHT SPEED 24H (CYBER LIME & MATTE CHARCOAL)
-   Theme: High-Performance Midnight Express, Tactical, Ultra-Legible
+   SULTHAN BU PHONE — CRIMSON TITANIUM & WARM AMBER 24H
+   Theme: Racing Crimson Red (#ef4444) + Warm Amber (#f59e0b) + Titanium Slate
+   Authentic brand colors derived from Sulthan's official emblem.
+   Zero CilokTech Lime conflict. Ultra-high speed 24-hour aesthetic.
    ========================================================================== */
 
 :root {
-  --bg-deep: #090a0d;
-  --bg-subtle: #0f1117;
-  --card-bg: #141722;
-  --card-hover: #1c2130;
-  --card-inner: #0b0d13;
+  --bg-deep: #08090d;
+  --bg-subtle: #0f1118;
+  --card-bg: #141724;
+  --card-hover: #1c2132;
+  --card-inner: #0a0c12;
   --border-dim: rgba(255, 255, 255, 0.08);
-  --border-mid: rgba(255, 255, 255, 0.14);
-  --border-neon: rgba(183, 242, 28, 0.35);
-  --lime: #b7f21c;
-  --lime-glow: rgba(183, 242, 28, 0.2);
-  --lime-dim: rgba(183, 242, 28, 0.08);
+  --border-mid: rgba(255, 255, 255, 0.15);
+  --border-crimson: rgba(239, 68, 68, 0.35);
+  --border-amber: rgba(245, 158, 11, 0.3);
+  
+  /* BRAND SIGNATURE ACCENTS */
+  --crimson: #ef4444;
+  --crimson-glow: rgba(239, 68, 68, 0.25);
+  --crimson-dim: rgba(239, 68, 68, 0.08);
+  --amber: #f59e0b;
+  --amber-glow: rgba(245, 158, 11, 0.25);
+  --amber-dim: rgba(245, 158, 11, 0.08);
+
   --text-white: #ffffff;
-  --text-primary: #e6edf3;
-  --text-secondary: #9aa5b5;
-  --text-muted: #657182;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
   --brand-wa: #25d366;
-  --brand-red: #f43f5e;
 }
 
 body {
@@ -31,14 +39,14 @@ body {
   overflow-x: hidden !important;
 }
 
-/* Background Speed Grid */
+/* Background Crimson & Amber Subtle Mesh */
 body::before {
   content: '';
   position: fixed;
   top: 0; left: 0; right: 0; height: 100vh;
   background: 
-    radial-gradient(circle at 50% 0%, rgba(183, 242, 28, 0.05) 0%, transparent 60%),
-    radial-gradient(circle at 90% 40%, rgba(244, 63, 94, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 50% 0%, rgba(239, 68, 68, 0.06) 0%, transparent 60%),
+    radial-gradient(circle at 85% 35%, rgba(245, 158, 11, 0.04) 0%, transparent 50%),
     linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
   background-size: 100% 100%, 100% 100%, 48px 48px, 48px 48px;
@@ -52,22 +60,9 @@ body::before {
   max-width: 1160px !important;
 }
 
-/* Kill all old gold elements */
-.grad-gold, .crown, .serif {
-  background: none !important;
-  -webkit-text-fill-color: initial !important;
-  font-family: 'Plus Jakarta Sans', sans-serif !important;
-  font-style: normal !important;
-}
-
-.text-lime, .highlight-lime {
-  color: var(--lime) !important;
-  font-weight: 800 !important;
-}
-
 /* NAVBAR */
 nav#mainNav {
-  background: rgba(9, 10, 13, 0.9) !important;
+  background: rgba(8, 9, 13, 0.92) !important;
   backdrop-filter: blur(20px) saturate(180%) !important;
   -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
   border-bottom: 1px solid var(--border-dim) !important;
@@ -84,7 +79,7 @@ nav#mainNav {
   width: 38px !important;
   height: 38px !important;
   border-radius: 10px !important;
-  border: 1px solid var(--border-neon) !important;
+  border: 1px solid var(--border-crimson) !important;
 }
 
 .logo-text {
@@ -95,7 +90,7 @@ nav#mainNav {
 }
 
 .logo-text b {
-  color: var(--lime) !important;
+  color: var(--crimson) !important;
 }
 
 .nav-links a {
@@ -106,22 +101,24 @@ nav#mainNav {
 }
 
 .nav-links a:hover {
-  color: var(--lime) !important;
+  color: var(--crimson) !important;
 }
 
 .btn-wa-nav {
-  background: var(--lime) !important;
-  color: #000 !important;
+  background: linear-gradient(135deg, var(--crimson), #dc2626) !important;
+  color: #fff !important;
   font-weight: 800 !important;
   font-size: 0.82rem !important;
   border-radius: 8px !important;
-  box-shadow: 0 0 16px var(--lime-glow) !important;
+  box-shadow: 0 0 16px var(--crimson-glow) !important;
 }
 
-/* HERO SECTION — SPEED 24H */
+/* HERO SECTION */
 .hero {
   padding: 130px 0 40px !important;
   min-height: auto !important;
+  position: relative !important;
+  display: block !important;
 }
 
 .hero-crest {
@@ -132,9 +129,9 @@ nav#mainNav {
   display: inline-flex !important;
   align-items: center !important;
   gap: 10px !important;
-  background: rgba(183, 242, 28, 0.08) !important;
-  border: 1px solid var(--border-neon) !important;
-  color: var(--lime) !important;
+  background: rgba(239, 68, 68, 0.08) !important;
+  border: 1px solid var(--border-crimson) !important;
+  color: var(--crimson) !important;
   font-family: ui-monospace, monospace !important;
   font-size: 0.8rem !important;
   font-weight: 700 !important;
@@ -148,8 +145,8 @@ nav#mainNav {
   width: 8px !important;
   height: 8px !important;
   border-radius: 50% !important;
-  background: var(--lime) !important;
-  box-shadow: 0 0 10px var(--lime) !important;
+  background: var(--crimson) !important;
+  box-shadow: 0 0 10px var(--crimson) !important;
 }
 
 .hero h1 {
@@ -159,6 +156,14 @@ nav#mainNav {
   line-height: 1.05 !important;
   color: #fff !important;
   margin-bottom: 16px !important;
+}
+
+.hero h1 span.grad-gold {
+  color: var(--amber) !important;
+  background: linear-gradient(135deg, var(--amber), #fbbf24) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
 }
 
 .hero p {
@@ -174,11 +179,11 @@ nav#mainNav {
 }
 
 .btn-primary {
-  background: var(--lime) !important;
-  color: #090a0d !important;
+  background: linear-gradient(135deg, var(--crimson), #dc2626) !important;
+  color: #ffffff !important;
   font-weight: 800 !important;
   border-radius: 10px !important;
-  box-shadow: 0 4px 20px var(--lime-glow) !important;
+  box-shadow: 0 4px 20px var(--crimson-glow) !important;
 }
 
 .btn-wa {
@@ -189,8 +194,8 @@ nav#mainNav {
 }
 
 .btn-wa:hover {
-  border-color: var(--lime) !important;
-  color: var(--lime) !important;
+  border-color: var(--amber) !important;
+  color: var(--amber) !important;
 }
 
 .hero-trust {
@@ -222,7 +227,7 @@ nav#mainNav {
 .engine-box {
   background: var(--card-bg) !important;
   border: 1px solid var(--border-dim) !important;
-  border-top: 2px solid var(--lime) !important;
+  border-top: 2px solid var(--crimson) !important;
   border-radius: 16px !important;
   padding: 28px !important;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7) !important;
@@ -260,13 +265,13 @@ nav#mainNav {
 }
 
 .engine-tab-btn.active {
-  background: var(--lime) !important;
-  color: #090a0d !important;
+  background: linear-gradient(135deg, var(--crimson), #dc2626) !important;
+  color: #fff !important;
   font-weight: 800 !important;
-  box-shadow: 0 2px 10px var(--lime-glow) !important;
+  box-shadow: 0 2px 10px var(--crimson-glow) !important;
 }
 
-/* Tab Content Display Strict Isolation */
+/* TAB CONTENT DISPLAY STRICT ISOLATION (ZERO OVERLAP) */
 .tab-content {
   display: none !important;
 }
@@ -311,14 +316,14 @@ nav#mainNav {
 }
 
 .form-group select:focus, .form-group input:focus {
-  border-color: var(--lime) !important;
-  box-shadow: 0 0 0 2px var(--lime-glow) !important;
+  border-color: var(--crimson) !important;
+  box-shadow: 0 0 0 2px var(--crimson-glow) !important;
 }
 
 .engine-preview {
   background: var(--card-inner) !important;
   border: 1px solid var(--border-dim) !important;
-  border-left: 3px solid var(--lime) !important;
+  border-left: 3px solid var(--amber) !important;
   border-radius: 8px !important;
   padding: 14px 18px !important;
   margin-bottom: 20px !important;
@@ -326,7 +331,7 @@ nav#mainNav {
 
 .engine-preview-label {
   display: block !important;
-  color: var(--lime) !important;
+  color: var(--amber) !important;
   font-size: 0.72rem !important;
   font-family: ui-monospace, monospace !important;
   letter-spacing: 0.08em !important;
@@ -348,9 +353,9 @@ nav#mainNav {
   padding: 16px 20px !important;
   font-size: 0.98rem !important;
   font-weight: 800 !important;
-  background: var(--lime) !important;
-  color: #090a0d !important;
-  box-shadow: 0 4px 20px var(--lime-glow) !important;
+  background: linear-gradient(135deg, var(--brand-wa), #1ebd56) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3) !important;
   border: none !important;
   cursor: pointer !important;
   display: flex !important;
@@ -362,7 +367,7 @@ nav#mainNav {
 }
 
 .btn-engine-submit:hover {
-  filter: brightness(1.1) !important;
+  filter: brightness(1.08) !important;
   transform: translateY(-1px) !important;
 }
 
@@ -385,8 +390,8 @@ nav#mainNav {
 }
 
 .feat-ic {
-  background: var(--lime-dim) !important;
-  border: 1px solid var(--border-neon) !important;
+  background: var(--crimson-dim) !important;
+  border: 1px solid var(--border-crimson) !important;
   border-radius: 8px !important;
   width: 36px !important;
   height: 36px !important;
@@ -404,9 +409,9 @@ nav#mainNav {
 
 /* SECTION HEADINGS */
 .sec-head .kicker {
-  background: var(--lime-dim) !important;
-  border: 1px solid var(--border-neon) !important;
-  color: var(--lime) !important;
+  background: var(--crimson-dim) !important;
+  border: 1px solid var(--border-crimson) !important;
+  color: var(--crimson) !important;
   font-family: ui-monospace, monospace !important;
   font-size: 0.72rem !important;
   font-weight: 700 !important;
@@ -451,7 +456,7 @@ nav#mainNav {
 }
 
 .about-stats .stat .n {
-  color: var(--lime) !important;
+  color: var(--amber) !important;
   font-weight: 900 !important;
 }
 
@@ -470,7 +475,7 @@ nav#mainNav {
 }
 
 .svc:hover, .brand:hover, .testi:hover {
-  border-color: var(--border-neon) !important;
+  border-color: var(--border-crimson) !important;
   background: var(--card-hover) !important;
   transform: translateY(-2px) !important;
 }
@@ -488,8 +493,8 @@ nav#mainNav {
 
 .svc .tag {
   background: var(--card-inner) !important;
-  border: 1px solid var(--border-neon) !important;
-  color: var(--lime) !important;
+  border: 1px solid var(--border-amber) !important;
+  color: var(--amber) !important;
   font-family: ui-monospace, monospace !important;
   font-size: 0.72rem !important;
   font-weight: 700 !important;
@@ -500,7 +505,7 @@ nav#mainNav {
 .gestun-box {
   background: var(--card-bg) !important;
   border: 1px solid var(--border-dim) !important;
-  border-top: 2px solid var(--lime) !important;
+  border-top: 2px solid var(--amber) !important;
   border-radius: 16px !important;
   padding: 36px 24px !important;
 }
@@ -516,8 +521,8 @@ nav#mainNav {
 }
 
 .paylater-grid .pl:hover {
-  border-color: var(--lime) !important;
-  color: var(--lime) !important;
+  border-color: var(--crimson) !important;
+  color: #fff !important;
 }
 
 /* FAQ ACCORDION */
@@ -560,21 +565,22 @@ footer {
 }
 
 .foot-links a:hover {
-  color: var(--lime) !important;
+  color: var(--crimson) !important;
 }
 
 /* STICKY BOTTOM BAR */
 .sticky-cta {
-  background: rgba(9, 10, 13, 0.94) !important;
+  background: rgba(8, 9, 13, 0.94) !important;
   backdrop-filter: blur(20px) !important;
-  border-top: 1px solid var(--border-neon) !important;
+  border-top: 1px solid var(--border-crimson) !important;
 }
 
 .sticky-cta .btn-wa {
-  background: var(--lime) !important;
-  color: #090a0d !important;
+  background: linear-gradient(135deg, var(--crimson), #dc2626) !important;
+  color: #ffffff !important;
   font-weight: 800 !important;
   border: none !important;
+  box-shadow: 0 0 16px var(--crimson-glow) !important;
 }
 
 @media (max-width: 768px) {
