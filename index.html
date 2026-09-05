@@ -31,6 +31,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKfsunDXbtM.woff2" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/engine.css" />
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
     :root{
@@ -293,6 +294,143 @@
       </div>
     </div>
   </header>
+
+  <!-- SMART LEAD GENERATOR (OPSI 1) -->
+  <section class="smart-engine">
+    <div class="wrap">
+      <div class="engine-box">
+        <div class="engine-tabs">
+          <button type="button" class="engine-tab-btn active" data-tab="jual">
+            <span>💰 Jual HP Bekas (Lagi BU)</span>
+          </button>
+          <button type="button" class="engine-tab-btn" data-tab="beli">
+            <span>📱 Cari HP Second Ready</span>
+          </button>
+          <button type="button" class="engine-tab-btn" data-tab="gestun">
+            <span>⚡ Gestun Paylater &amp; CC</span>
+          </button>
+        </div>
+
+        <!-- TAB 1: JUAL HP / BU -->
+        <div class="tab-content active" id="tab-jual">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="jualBrand">Merk HP</label>
+              <select id="jualBrand">
+                <option value="iPhone">iPhone / Apple</option>
+                <option value="Samsung">Samsung</option>
+                <option value="Xiaomi / Redmi / Poco">Xiaomi / Redmi / Poco</option>
+                <option value="Oppo / Realme">Oppo / Realme</option>
+                <option value="Vivo / iQOO">Vivo / iQOO</option>
+                <option value="Infinix / Tecno">Infinix / Tecno</option>
+                <option value="Lainnya">Merk Lainnya</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="jualTipe">Tipe / Seri &amp; Memori</label>
+              <input type="text" id="jualTipe" placeholder="Misal: iPhone 11 128GB / A54 8/256" />
+            </div>
+            <div class="form-group">
+              <label for="jualKondisi">Kelengkapan &amp; Kondisi</label>
+              <select id="jualKondisi">
+                <option value="Fullset Mulus Like New (Tanpa Minus)">Fullset Mulus (No Minus)</option>
+                <option value="Fullset Ada Lecet Pemakaian">Fullset Ada Lecet Fisik</option>
+                <option value="Batangan / HP + Charger Saja">Batangan (Unit + Cas)</option>
+                <option value="Batangan Unit Only">Batangan (Unit Saja)</option>
+                <option value="Ada Minus Layar / Baterai / FaceID">Ada Minus Fungsi / Layar</option>
+              </select>
+            </div>
+          </div>
+          <div class="engine-preview">
+            <span class="engine-preview-label">Format WhatsApp yang Terbuat Otomatis:</span>
+            <p class="engine-preview-text" id="previewJualText"></p>
+          </div>
+          <a href="#" id="btnKirimJual" target="_blank" rel="noopener" class="btn-engine-submit">
+            <span>Taksir Harga &amp; Jual Sekarang via WhatsApp</span>
+            <span>→</span>
+          </a>
+        </div>
+
+        <!-- TAB 2: CARI HP SECOND -->
+        <div class="tab-content" id="tab-beli">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="beliBudget">Estimasi Budget Anda</label>
+              <select id="beliBudget">
+                <option value="Di bawah Rp 1,5 Juta">Di bawah Rp 1,5 Juta (Android Murah)</option>
+                <option value="Rp 1,5 Juta - Rp 3 Juta">Rp 1,5 Juta - Rp 3 Juta (Harian Mantap)</option>
+                <option value="Rp 3 Juta - Rp 6 Juta">Rp 3 Juta - Rp 6 Juta (iPhone 11 / Mid-Range)</option>
+                <option value="Rp 6 Juta - Rp 10 Juta">Rp 6 Juta - Rp 10 Juta (iPhone 12/13 / Flagship)</option>
+                <option value="Di atas Rp 10 Juta">Di atas Rp 10 Juta (iPhone 14/15 / Pro Series)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="beliPref">Preferensi Merk / Tipe Incaran</label>
+              <input type="text" id="beliPref" placeholder="Misal: iPhone mulus / Samsung RAM 8GB" />
+            </div>
+            <div class="form-group">
+              <label for="beliMetode">Rencana Transaksi</label>
+              <select id="beliMetode">
+                <option value="COD Diantar ke Lokasi Saya (Semarang)">COD Diantar Langsung (Semarang)</option>
+                <option value="Datang Langsung ke Toko Tlogosari">Cek Langsung ke Toko Tlogosari</option>
+                <option value="Tukar Tambah dengan HP Lama">Mau Tukar Tambah HP Lama</option>
+              </select>
+            </div>
+          </div>
+          <div class="engine-preview">
+            <span class="engine-preview-label">Format WhatsApp yang Terbuat Otomatis:</span>
+            <p class="engine-preview-text" id="previewBeliText"></p>
+          </div>
+          <a href="#" id="btnKirimBeli" target="_blank" rel="noopener" class="btn-engine-submit">
+            <span>Tanya Stok Ready Sesuai Budget via WhatsApp</span>
+            <span>→</span>
+          </a>
+        </div>
+
+        <!-- TAB 3: GESTUN PAYLATER & CC -->
+        <div class="tab-content" id="tab-gestun">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="gestunPlatform">Platform Paylater / Kartu</label>
+              <select id="gestunPlatform">
+                <option value="Shopee Paylater (SPaylater)">Shopee Paylater (SPaylater)</option>
+                <option value="Kredivo">Kredivo</option>
+                <option value="Akulaku">Akulaku</option>
+                <option value="GoPay Later">GoPay Later / Tokopedia</option>
+                <option value="Kartu Kredit (All Bank Visa/Mastercard)">Kartu Kredit (All Bank)</option>
+                <option value="Indodana / Home Credit">Indodana / Home Credit</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="gestunNominal">Estimasi Nominal Pencairan</label>
+              <select id="gestunNominal">
+                <option value="Rp 1.000.000 - Rp 2.500.000">Rp 1.000.000 - Rp 2.500.000</option>
+                <option value="Rp 2.500.000 - Rp 5.000.000">Rp 2.500.000 - Rp 5.000.000</option>
+                <option value="Rp 5.000.000 - Rp 10.000.000">Rp 5.000.000 - Rp 10.000.000</option>
+                <option value="Di atas Rp 10.000.000">Di atas Rp 10.000.000 (Limit Besar)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="gestunLokasi">Pilihan Cara Pencairan</label>
+              <select id="gestunLokasi">
+                <option value="Datang Langsung ke Toko Fisik Tlogosari">Langsung di Toko Tlogosari (Aman)</option>
+                <option value="COD / Ketemuan di Area Semarang">COD Ketemuan di Luar (Semarang)</option>
+                <option value="Online Cepat (Bagi Langganan)">Proses Cepat via WhatsApp</option>
+              </select>
+            </div>
+          </div>
+          <div class="engine-preview">
+            <span class="engine-preview-label">Format WhatsApp yang Terbuat Otomatis:</span>
+            <p class="engine-preview-text" id="previewGestunText"></p>
+          </div>
+          <a href="#" id="btnKirimGestun" target="_blank" rel="noopener" class="btn-engine-submit">
+            <span>Konsultasi Gestun &amp; Pencairan via WhatsApp</span>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <div class="features">
     <div class="wrap">
@@ -620,7 +758,72 @@
         document.querySelectorAll('.faq').forEach(x=>x.classList.remove('open'));
         if(!wasOpen) f.classList.add('open');
       });
+      // SMART ENGINE LOGIC (OPSI 1)
+    const engineTabs = document.querySelectorAll('.engine-tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    engineTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.dataset.tab;
+        engineTabs.forEach(t => t.classList.remove('active'));
+        tabContents.forEach(c => c.classList.remove('active'));
+        tab.classList.add('active');
+        const targetContent = document.getElementById('tab-' + target);
+        if (targetContent) targetContent.classList.add('active');
+      });
     });
+
+    const waNumber = '6281585857577';
+
+    // Update Jual WA Text
+    function updateJualText() {
+      const brand = document.getElementById('jualBrand').value;
+      const tipe = document.getElementById('jualTipe').value.trim() || '[Tipe HP Belum Diisi]';
+      const kondisi = document.getElementById('jualKondisi').value;
+      const text = `Halo Sulthan BU Phone 👑\nSaya mau jual HP (Lagi BU):\n• Merk: ${brand}\n• Tipe/Memori: ${tipe}\n• Kondisi: ${kondisi}\n\nMau ditaksir berapa ya min? Bisa COD malam ini?`;
+      document.getElementById('previewJualText').innerText = text;
+      document.getElementById('btnKirimJual').href = `https://wa.me/${waNumber}?text=${encodeURIComponent(text)}`;
+    }
+
+    // Update Beli WA Text
+    function updateBeliText() {
+      const budget = document.getElementById('beliBudget').value;
+      const pref = document.getElementById('beliPref').value.trim() || 'Rekomendasi terbaik';
+      const metode = document.getElementById('beliMetode').value;
+      const text = `Halo Sulthan BU Phone 👑\nSaya lagi cari HP second berkualitas:\n• Budget: ${budget}\n• Incaran: ${pref}\n• Rencana: ${metode}\n\nAda stok unit yang ready hari ini min?`;
+      document.getElementById('previewBeliText').innerText = text;
+      document.getElementById('btnKirimBeli').href = `https://wa.me/${waNumber}?text=${encodeURIComponent(text)}`;
+    }
+
+    // Update Gestun WA Text
+    function updateGestunText() {
+      const platform = document.getElementById('gestunPlatform').value;
+      const nominal = document.getElementById('gestunNominal').value;
+      const lokasi = document.getElementById('gestunLokasi').value;
+      const text = `Halo Sulthan BU Phone 👑\nSaya mau konsultasi gestun / pencairan limit:\n• Platform: ${platform}\n• Estimasi Limit: ${nominal}\n• Preferensi: ${lokasi}\n\nFee berapa dan syaratnya apa saja ya min? Butuh cair cepat.`;
+      document.getElementById('previewGestunText').innerText = text;
+      document.getElementById('btnKirimGestun').href = `https://wa.me/${waNumber}?text=${encodeURIComponent(text)}`;
+    }
+
+    ['jualBrand', 'jualTipe', 'jualKondisi'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) { el.addEventListener('input', updateJualText); el.addEventListener('change', updateJualText); }
+    });
+
+    ['beliBudget', 'beliPref', 'beliMetode'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) { el.addEventListener('input', updateBeliText); el.addEventListener('change', updateBeliText); }
+    });
+
+    ['gestunPlatform', 'gestunNominal', 'gestunLokasi'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) { el.addEventListener('input', updateGestunText); el.addEventListener('change', updateGestunText); }
+    });
+
+    updateJualText();
+    updateBeliText();
+    updateGestunText();
+  });
   </script>
 </body>
 </html>
