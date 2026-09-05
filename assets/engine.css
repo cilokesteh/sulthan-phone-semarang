@@ -1,40 +1,47 @@
 /* ==========================================================================
-   SULTHAN BU PHONE — ULTRA-MODERN PREMIUM REDESIGN v4.1 (FIXED)
-   Clean, Fluid, High-End Dark-Aesthetic, Hairline Precision
+   SULTHAN BU PHONE — MIDNIGHT SPEED 24H (CYBER LIME & MATTE CHARCOAL)
+   Theme: High-Performance Midnight Express, Tactical, Ultra-Legible
    ========================================================================== */
 
 :root {
-  --bg-dark: #07090e;
-  --surface-1: #0d111a;
-  --surface-2: #131a26;
-  --surface-hover: #1a2333;
-  --border-hairline: rgba(255, 255, 255, 0.08);
-  --border-accent: rgba(255, 204, 0, 0.25);
-  --gold-glow: rgba(255, 204, 0, 0.15);
-  --accent-gold: #ffcc00;
-  --accent-amber: #f59e0b;
-  --text-main: #f8fafc;
-  --text-sub: #94a3b8;
-  --text-muted: #64748b;
-  --brand-green: #22c55e;
-  --brand-red: #ef4444;
+  --bg-deep: #090a0d;
+  --bg-subtle: #0f1117;
+  --card-bg: #141722;
+  --card-hover: #1c2130;
+  --card-inner: #0b0d13;
+  --border-dim: rgba(255, 255, 255, 0.08);
+  --border-mid: rgba(255, 255, 255, 0.14);
+  --border-neon: rgba(183, 242, 28, 0.35);
+  --lime: #b7f21c;
+  --lime-glow: rgba(183, 242, 28, 0.2);
+  --lime-dim: rgba(183, 242, 28, 0.08);
+  --text-white: #ffffff;
+  --text-primary: #e6edf3;
+  --text-secondary: #9aa5b5;
+  --text-muted: #657182;
+  --brand-wa: #25d366;
+  --brand-red: #f43f5e;
 }
 
 body {
-  background-color: var(--bg-dark) !important;
-  color: var(--text-main) !important;
+  background-color: var(--bg-deep) !important;
+  color: var(--text-primary) !important;
   font-family: 'Plus Jakarta Sans', -apple-system, sans-serif !important;
   line-height: 1.6 !important;
+  overflow-x: hidden !important;
 }
 
-/* Background Subtle Mesh */
+/* Background Speed Grid */
 body::before {
   content: '';
   position: fixed;
   top: 0; left: 0; right: 0; height: 100vh;
   background: 
-    radial-gradient(circle at 50% 0%, rgba(255, 204, 0, 0.04) 0%, transparent 60%),
-    radial-gradient(circle at 85% 30%, rgba(239, 68, 68, 0.03) 0%, transparent 50%);
+    radial-gradient(circle at 50% 0%, rgba(183, 242, 28, 0.05) 0%, transparent 60%),
+    radial-gradient(circle at 90% 40%, rgba(244, 63, 94, 0.03) 0%, transparent 50%),
+    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 48px 48px, 48px 48px;
   pointer-events: none;
   z-index: 0;
 }
@@ -42,123 +49,202 @@ body::before {
 .wrap {
   position: relative;
   z-index: 1;
-  max-width: 1180px !important;
+  max-width: 1160px !important;
 }
 
-/* NAVBAR UPGRADE */
+/* Kill all old gold elements */
+.grad-gold, .crown, .serif {
+  background: none !important;
+  -webkit-text-fill-color: initial !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-style: normal !important;
+}
+
+.text-lime, .highlight-lime {
+  color: var(--lime) !important;
+  font-weight: 800 !important;
+}
+
+/* NAVBAR */
 nav#mainNav {
-  background: rgba(7, 9, 14, 0.85) !important;
-  backdrop-filter: blur(20px) saturate(160%) !important;
-  -webkit-backdrop-filter: blur(20px) saturate(160%) !important;
-  border-bottom: 1px solid var(--border-hairline) !important;
-  padding: 14px 0 !important;
+  background: rgba(9, 10, 13, 0.9) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border-bottom: 1px solid var(--border-dim) !important;
+  padding: 12px 0 !important;
+}
+
+.logo {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+.logo img {
+  width: 38px !important;
+  height: 38px !important;
+  border-radius: 10px !important;
+  border: 1px solid var(--border-neon) !important;
 }
 
 .logo-text {
-  color: var(--text-main) !important;
+  color: var(--text-white) !important;
+  font-size: 1.05rem !important;
   font-weight: 800 !important;
-  letter-spacing: -0.02em !important;
+  letter-spacing: -0.03em !important;
 }
 
 .logo-text b {
-  color: var(--accent-gold) !important;
+  color: var(--lime) !important;
 }
 
 .nav-links a {
-  color: var(--text-sub) !important;
+  color: var(--text-secondary) !important;
   font-size: 0.86rem !important;
-  font-weight: 500 !important;
-  transition: all 0.2s ease !important;
+  font-weight: 600 !important;
+  transition: color 0.2s ease !important;
 }
 
 .nav-links a:hover {
-  color: var(--text-main) !important;
+  color: var(--lime) !important;
 }
 
 .btn-wa-nav {
-  background: linear-gradient(135deg, var(--brand-green), #16a34a) !important;
-  box-shadow: 0 4px 14px rgba(34, 197, 94, 0.25) !important;
+  background: var(--lime) !important;
+  color: #000 !important;
+  font-weight: 800 !important;
+  font-size: 0.82rem !important;
+  border-radius: 8px !important;
+  box-shadow: 0 0 16px var(--lime-glow) !important;
 }
 
-/* HERO SECTION UPGRADE */
+/* HERO SECTION — SPEED 24H */
 .hero {
-  padding: 140px 0 60px !important;
+  padding: 130px 0 40px !important;
   min-height: auto !important;
-  position: relative !important;
-  display: block !important;
 }
 
 .hero-crest {
-  width: 96px !important;
-  height: 96px !important;
-  border-radius: 24px !important;
-  border: 1px solid var(--border-accent) !important;
-  box-shadow: 0 16px 40px rgba(0,0,0,0.6), 0 0 30px var(--gold-glow) !important;
+  display: none !important;
 }
 
 .hero-badge {
-  background: var(--surface-1) !important;
-  border: 1px solid var(--border-hairline) !important;
-  color: var(--text-sub) !important;
-  font-size: 0.82rem !important;
-  padding: 6px 18px !important;
-  border-radius: 100px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  background: rgba(183, 242, 28, 0.08) !important;
+  border: 1px solid var(--border-neon) !important;
+  color: var(--lime) !important;
+  font-family: ui-monospace, monospace !important;
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  padding: 6px 16px !important;
+  border-radius: 6px !important;
+  letter-spacing: 0.05em !important;
+  margin-bottom: 20px !important;
 }
 
 .hero-badge .dot {
-  background: var(--brand-green) !important;
-  box-shadow: 0 0 10px var(--brand-green) !important;
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  background: var(--lime) !important;
+  box-shadow: 0 0 10px var(--lime) !important;
 }
 
 .hero h1 {
-  font-size: clamp(2.2rem, 5vw, 3.8rem) !important;
-  font-weight: 800 !important;
-  letter-spacing: -0.04em !important;
-  line-height: 1.1 !important;
+  font-size: clamp(2.4rem, 5.5vw, 4rem) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.05em !important;
+  line-height: 1.05 !important;
   color: #fff !important;
+  margin-bottom: 16px !important;
 }
 
 .hero p {
-  color: var(--text-sub) !important;
+  color: var(--text-secondary) !important;
   font-size: 1.05rem !important;
   max-width: 620px !important;
-  line-height: 1.7 !important;
+  line-height: 1.65 !important;
+  margin-bottom: 24px !important;
 }
 
-/* DUAL ENGINE LEAD GENERATOR CARD UPGRADE */
+.hero-cta {
+  gap: 12px !important;
+}
+
+.btn-primary {
+  background: var(--lime) !important;
+  color: #090a0d !important;
+  font-weight: 800 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 20px var(--lime-glow) !important;
+}
+
+.btn-wa {
+  background: #181d28 !important;
+  border: 1px solid var(--border-mid) !important;
+  color: #fff !important;
+  border-radius: 10px !important;
+}
+
+.btn-wa:hover {
+  border-color: var(--lime) !important;
+  color: var(--lime) !important;
+}
+
+.hero-trust {
+  margin-top: 26px !important;
+  gap: 20px !important;
+}
+
+.hero-trust span {
+  color: var(--text-muted) !important;
+  font-size: 0.82rem !important;
+  font-family: ui-monospace, monospace !important;
+  border: 1px solid var(--border-dim) !important;
+  padding: 4px 12px !important;
+  border-radius: 6px !important;
+  background: var(--card-inner) !important;
+}
+
+.hero-trust b {
+  color: #fff !important;
+}
+
+/* SMART ENGINE TACTICAL CARD */
 .smart-engine {
-  position: relative !important;
-  z-index: 5 !important;
   margin-top: 20px !important;
-  margin-bottom: 70px !important;
+  margin-bottom: 60px !important;
   clear: both !important;
 }
 
 .engine-box {
-  background: var(--surface-1) !important;
-  border: 1px solid var(--border-hairline) !important;
-  border-radius: 24px !important;
-  padding: 32px !important;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.05) !important;
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border-dim) !important;
+  border-top: 2px solid var(--lime) !important;
+  border-radius: 16px !important;
+  padding: 28px !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7) !important;
 }
 
 .engine-tabs {
   display: grid !important;
   grid-template-columns: repeat(3, 1fr) !important;
-  background: var(--bg-dark) !important;
-  border: 1px solid var(--border-hairline) !important;
-  padding: 6px !important;
-  border-radius: 16px !important;
-  gap: 8px !important;
-  margin-bottom: 24px !important;
+  background: var(--card-inner) !important;
+  border: 1px solid var(--border-dim) !important;
+  padding: 5px !important;
+  border-radius: 10px !important;
+  gap: 6px !important;
+  margin-bottom: 22px !important;
 }
 
 .engine-tab-btn {
-  border-radius: 12px !important;
-  font-size: 0.9rem !important;
+  border-radius: 8px !important;
+  font-size: 0.88rem !important;
   font-weight: 700 !important;
-  padding: 14px 16px !important;
-  color: var(--text-sub) !important;
+  padding: 12px 14px !important;
+  color: var(--text-secondary) !important;
   background: transparent !important;
   border: none !important;
   cursor: pointer !important;
@@ -166,33 +252,32 @@ nav#mainNav {
   align-items: center !important;
   justify-content: center !important;
   gap: 8px !important;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  transition: all 0.2s ease !important;
 }
 
 .engine-tab-btn:hover {
   color: #fff !important;
-  background: rgba(255, 255, 255, 0.03) !important;
 }
 
 .engine-tab-btn.active {
-  background: linear-gradient(135deg, #ffcc00, #f59e0b) !important;
-  color: #0b0f17 !important;
+  background: var(--lime) !important;
+  color: #090a0d !important;
   font-weight: 800 !important;
-  box-shadow: 0 4px 20px rgba(255, 204, 0, 0.3) !important;
+  box-shadow: 0 2px 10px var(--lime-glow) !important;
 }
 
-/* TAB CONTENT DISPLAY FIX (CRITICAL) */
+/* Tab Content Display Strict Isolation */
 .tab-content {
   display: none !important;
 }
 .tab-content.active {
   display: block !important;
-  animation: tabFadeIn 0.35s ease !important;
+  animation: fastFade 0.2s ease !important;
 }
 
-@keyframes tabFadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
+@keyframes fastFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .form-grid {
@@ -204,68 +289,68 @@ nav#mainNav {
 
 .form-group label {
   display: block !important;
-  color: var(--text-muted) !important;
-  font-size: 0.76rem !important;
-  letter-spacing: 0.08em !important;
+  color: var(--text-secondary) !important;
+  font-size: 0.74rem !important;
+  font-family: ui-monospace, monospace !important;
+  letter-spacing: 0.06em !important;
   font-weight: 700 !important;
   margin-bottom: 6px !important;
+  text-transform: uppercase !important;
 }
 
 .form-group select, .form-group input {
   width: 100% !important;
-  background: var(--surface-2) !important;
-  border: 1px solid var(--border-hairline) !important;
+  background: var(--card-inner) !important;
+  border: 1px solid var(--border-mid) !important;
   color: #fff !important;
-  border-radius: 12px !important;
-  padding: 14px 16px !important;
-  font-size: 0.95rem !important;
+  border-radius: 8px !important;
+  padding: 12px 14px !important;
+  font-size: 0.92rem !important;
   outline: none !important;
-  transition: all 0.2s ease !important;
+  transition: all 0.15s ease !important;
 }
 
 .form-group select:focus, .form-group input:focus {
-  border-color: var(--accent-gold) !important;
-  background: var(--surface-hover) !important;
-  box-shadow: 0 0 0 3px rgba(255, 204, 0, 0.15) !important;
+  border-color: var(--lime) !important;
+  box-shadow: 0 0 0 2px var(--lime-glow) !important;
 }
 
 .engine-preview {
-  background: rgba(0, 0, 0, 0.25) !important;
-  border: 1px solid var(--border-hairline) !important;
-  border-left: 3px solid var(--accent-gold) !important;
-  border-radius: 14px !important;
-  padding: 18px 22px !important;
+  background: var(--card-inner) !important;
+  border: 1px solid var(--border-dim) !important;
+  border-left: 3px solid var(--lime) !important;
+  border-radius: 8px !important;
+  padding: 14px 18px !important;
   margin-bottom: 20px !important;
 }
 
 .engine-preview-label {
   display: block !important;
-  color: var(--accent-gold) !important;
+  color: var(--lime) !important;
   font-size: 0.72rem !important;
-  letter-spacing: 0.1em !important;
+  font-family: ui-monospace, monospace !important;
+  letter-spacing: 0.08em !important;
   font-weight: 800 !important;
   margin-bottom: 6px !important;
 }
 
 .engine-preview-text {
-  color: #cbd5e1 !important;
-  font-size: 0.92rem !important;
-  font-family: inherit !important;
-  font-style: normal !important;
-  line-height: 1.6 !important;
+  color: var(--text-primary) !important;
+  font-size: 0.88rem !important;
+  font-family: ui-monospace, monospace !important;
+  line-height: 1.5 !important;
   white-space: pre-line !important;
 }
 
 .btn-engine-submit {
   width: 100% !important;
-  border-radius: 14px !important;
-  padding: 18px 24px !important;
-  font-size: 1.02rem !important;
+  border-radius: 10px !important;
+  padding: 16px 20px !important;
+  font-size: 0.98rem !important;
   font-weight: 800 !important;
-  letter-spacing: 0.02em !important;
-  background: linear-gradient(135deg, #22c55e, #16a34a) !important;
-  box-shadow: 0 8px 28px rgba(34, 197, 94, 0.3) !important;
-  color: #fff !important;
+  background: var(--lime) !important;
+  color: #090a0d !important;
+  box-shadow: 0 4px 20px var(--lime-glow) !important;
   border: none !important;
   cursor: pointer !important;
   display: flex !important;
@@ -273,197 +358,232 @@ nav#mainNav {
   justify-content: center !important;
   gap: 10px !important;
   text-decoration: none !important;
-  transition: all 0.25s ease !important;
+  transition: all 0.2s ease !important;
 }
 
 .btn-engine-submit:hover {
-  transform: translateY(-2px) scale(1.01) !important;
-  box-shadow: 0 12px 34px rgba(34, 197, 94, 0.45) !important;
+  filter: brightness(1.1) !important;
+  transform: translateY(-1px) !important;
 }
 
 /* FEATURES BAR */
 .features {
-  background: var(--surface-1) !important;
-  border-top: 1px solid var(--border-hairline) !important;
-  border-bottom: 1px solid var(--border-hairline) !important;
-  padding: 24px 0 !important;
-  clear: both !important;
+  background: var(--bg-subtle) !important;
+  border-top: 1px solid var(--border-dim) !important;
+  border-bottom: 1px solid var(--border-dim) !important;
+  padding: 20px 0 !important;
 }
 
 .feat {
-  border: 1px solid var(--border-hairline) !important;
-  border-radius: 16px !important;
-  background: var(--surface-2) !important;
-  padding: 14px 18px !important;
-  transition: all 0.2s ease !important;
-}
-
-.feat:hover {
-  border-color: var(--border-accent) !important;
-  transform: translateY(-2px) !important;
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border-dim) !important;
+  border-radius: 10px !important;
+  padding: 12px 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
 }
 
 .feat-ic {
-  background: rgba(255, 204, 0, 0.08) !important;
-  border: 1px solid rgba(255, 204, 0, 0.2) !important;
-  border-radius: 12px !important;
+  background: var(--lime-dim) !important;
+  border: 1px solid var(--border-neon) !important;
+  border-radius: 8px !important;
+  width: 36px !important;
+  height: 36px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.1rem !important;
 }
 
 .feat span {
-  color: var(--text-main) !important;
-  font-weight: 600 !important;
+  color: #fff !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
 }
 
 /* SECTION HEADINGS */
 .sec-head .kicker {
-  background: rgba(255, 204, 0, 0.08) !important;
-  border: 1px solid rgba(255, 204, 0, 0.2) !important;
-  color: var(--accent-gold) !important;
+  background: var(--lime-dim) !important;
+  border: 1px solid var(--border-neon) !important;
+  color: var(--lime) !important;
+  font-family: ui-monospace, monospace !important;
+  font-size: 0.72rem !important;
   font-weight: 700 !important;
   letter-spacing: 0.1em !important;
-  padding: 5px 14px !important;
-  border-radius: 100px !important;
+  padding: 4px 12px !important;
+  border-radius: 4px !important;
 }
 
 .sec-head h2 {
-  font-size: clamp(1.8rem, 3.8vw, 2.6rem) !important;
+  font-size: clamp(1.8rem, 3.6vw, 2.5rem) !important;
   font-weight: 800 !important;
-  letter-spacing: -0.03em !important;
+  letter-spacing: -0.04em !important;
   color: #fff !important;
 }
 
 .sec-head p {
-  color: var(--text-sub) !important;
-  font-size: 0.98rem !important;
+  color: var(--text-secondary) !important;
+  font-size: 0.94rem !important;
 }
 
-/* CARDS: SERVICES, TESTIMONIALS, BRANDS */
-.svc, .brand, .testi, .about-media {
-  background: var(--surface-1) !important;
-  border: 1px solid var(--border-hairline) !important;
-  border-radius: 20px !important;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+/* ABOUT SECTION */
+.about-grid {
+  gap: 36px !important;
+}
+
+.about-media {
+  border-radius: 14px !important;
+  border: 1px solid var(--border-dim) !important;
+  overflow: hidden !important;
+}
+
+.about-body h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem) !important;
+  font-weight: 800 !important;
+  color: #fff !important;
+  letter-spacing: -0.03em !important;
+}
+
+.about-body p {
+  color: var(--text-secondary) !important;
+  font-size: 0.92rem !important;
+}
+
+.about-stats .stat .n {
+  color: var(--lime) !important;
+  font-weight: 900 !important;
+}
+
+.about-stats .stat .l {
+  color: var(--text-muted) !important;
+  font-family: ui-monospace, monospace !important;
+  font-size: 0.75rem !important;
+}
+
+/* CARDS (SERVICES, BRANDS, TESTIMONIALS) */
+.svc, .brand, .testi {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border-dim) !important;
+  border-radius: 12px !important;
+  transition: all 0.2s ease !important;
 }
 
 .svc:hover, .brand:hover, .testi:hover {
-  background: var(--surface-hover) !important;
-  border-color: var(--border-accent) !important;
-  transform: translateY(-4px) !important;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6) !important;
+  border-color: var(--border-neon) !important;
+  background: var(--card-hover) !important;
+  transform: translateY(-2px) !important;
 }
 
 .svc h3 {
   color: #fff !important;
-  font-weight: 700 !important;
-  font-size: 1.15rem !important;
+  font-size: 1.05rem !important;
+  font-weight: 800 !important;
 }
 
 .svc p {
-  color: var(--text-sub) !important;
-  font-size: 0.9rem !important;
-  line-height: 1.6 !important;
+  color: var(--text-secondary) !important;
+  font-size: 0.88rem !important;
 }
 
 .svc .tag {
-  background: rgba(255, 255, 255, 0.05) !important;
-  border: 1px solid var(--border-hairline) !important;
-  color: var(--accent-gold) !important;
-  font-weight: 600 !important;
-  border-radius: 100px !important;
+  background: var(--card-inner) !important;
+  border: 1px solid var(--border-neon) !important;
+  color: var(--lime) !important;
+  font-family: ui-monospace, monospace !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  border-radius: 4px !important;
 }
 
 /* GESTUN BOX */
 .gestun-box {
-  background: var(--surface-1) !important;
-  border: 1px solid var(--border-hairline) !important;
-  border-radius: 24px !important;
-  padding: 40px 30px !important;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.7) !important;
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border-dim) !important;
+  border-top: 2px solid var(--lime) !important;
+  border-radius: 16px !important;
+  padding: 36px 24px !important;
 }
 
 .paylater-grid .pl {
-  background: var(--surface-2) !important;
-  border: 1px solid var(--border-hairline) !important;
-  color: var(--text-main) !important;
-  border-radius: 12px !important;
+  background: var(--card-inner) !important;
+  border: 1px solid var(--border-dim) !important;
+  color: var(--text-secondary) !important;
+  border-radius: 6px !important;
+  font-size: 0.8rem !important;
   font-weight: 600 !important;
-  padding: 12px 14px !important;
-  transition: all 0.2s ease !important;
+  font-family: ui-monospace, monospace !important;
 }
 
 .paylater-grid .pl:hover {
-  border-color: var(--accent-gold) !important;
-  background: var(--surface-hover) !important;
-  color: var(--accent-gold) !important;
-  transform: translateY(-2px) !important;
+  border-color: var(--lime) !important;
+  color: var(--lime) !important;
 }
 
 /* FAQ ACCORDION */
 .faq-grid .faq {
-  background: var(--surface-1) !important;
-  border: 1px solid var(--border-hairline) !important;
-  border-radius: 16px !important;
-  margin-bottom: 12px !important;
-  overflow: hidden !important;
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border-dim) !important;
+  border-radius: 10px !important;
+  margin-bottom: 8px !important;
 }
 
 .faq-q {
-  padding: 20px 24px !important;
+  padding: 16px 20px !important;
+  font-size: 0.92rem !important;
   font-weight: 700 !important;
-  color: var(--text-main) !important;
-  font-size: 0.98rem !important;
+  color: #fff !important;
 }
 
 .faq-a {
-  padding: 0 24px 20px !important;
-  color: var(--text-sub) !important;
-  font-size: 0.92rem !important;
-  line-height: 1.7 !important;
+  padding: 0 20px 16px !important;
+  color: var(--text-secondary) !important;
+  font-size: 0.88rem !important;
+  line-height: 1.6 !important;
 }
 
 /* FOOTER */
 footer {
-  background: #040608 !important;
-  border-top: 1px solid var(--border-hairline) !important;
-  padding: 60px 0 100px !important;
+  background: #06070a !important;
+  border-top: 1px solid var(--border-dim) !important;
+  padding: 50px 0 90px !important;
 }
 
 .foot-logo {
-  font-size: 1.4rem !important;
-  font-weight: 800 !important;
+  color: #fff !important;
+  font-weight: 900 !important;
+  font-size: 1.3rem !important;
 }
 
 .foot-links a {
   color: var(--text-muted) !important;
-  font-size: 0.85rem !important;
 }
 
 .foot-links a:hover {
-  color: var(--accent-gold) !important;
+  color: var(--lime) !important;
 }
 
 /* STICKY BOTTOM BAR */
 .sticky-cta {
-  background: rgba(7, 9, 14, 0.92) !important;
-  backdrop-filter: blur(20px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
-  border-top: 1px solid var(--border-hairline) !important;
-  box-shadow: 0 -8px 30px rgba(0,0,0,0.8) !important;
+  background: rgba(9, 10, 13, 0.94) !important;
+  backdrop-filter: blur(20px) !important;
+  border-top: 1px solid var(--border-neon) !important;
 }
 
 .sticky-cta .btn-wa {
-  background: linear-gradient(135deg, var(--brand-green), #16a34a) !important;
-  border-radius: 12px !important;
-  font-weight: 700 !important;
+  background: var(--lime) !important;
+  color: #090a0d !important;
+  font-weight: 800 !important;
+  border: none !important;
 }
 
 @media (max-width: 768px) {
   .hero {
-    padding: 110px 0 30px !important;
+    padding: 105px 0 24px !important;
   }
   .smart-engine {
     margin-top: 10px !important;
-    margin-bottom: 40px !important;
+    margin-bottom: 36px !important;
   }
   .engine-box {
     padding: 20px 16px !important;
@@ -472,19 +592,15 @@ footer {
     grid-template-columns: 1fr !important;
   }
   .engine-tab-btn {
-    padding: 12px 14px !important;
-    font-size: 0.88rem !important;
+    padding: 12px !important;
+    font-size: 0.86rem !important;
   }
   .form-grid {
     grid-template-columns: 1fr !important;
     gap: 12px !important;
   }
-  .form-group select, .form-group input {
-    padding: 12px 14px !important;
-    font-size: 0.9rem !important;
-  }
   .btn-engine-submit {
-    padding: 16px !important;
-    font-size: 0.94rem !important;
+    padding: 15px !important;
+    font-size: 0.92rem !important;
   }
 }
